@@ -1,0 +1,187 @@
+ASSIGNMENT 1.1: HTTP REQUEST ANALYSIS
+
+API USED:
+JSONPlaceholder
+
+BASE URL:
+https://jsonplaceholder.typicode.com
+
+## REQUEST 1: GET ALL POSTS
+
+cURL Command:
+
+curl.exe -i https://jsonplaceholder.typicode.com/posts
+
+HTTP Method:
+GET
+
+URL:
+https://jsonplaceholder.typicode.com/posts
+
+Purpose:
+Retrieve all posts from the API.
+
+Request:
+The client sends a GET request to the /posts endpoint.
+
+Important Response Headers:
+Content-Type: application/json
+
+Expected Status Code:
+200 OK
+
+Meaning of Status Code:
+200 OK means that the server successfully processed the request.
+
+Response:
+The server returns a JSON array containing posts.
+
+Request-Response Cycle:
+
+
+REQUEST 2: GET ONE POST
+
+cURL Command:
+
+curl.exe -i https://jsonplaceholder.typicode.com/posts/1
+
+HTTP Method:
+GET
+
+URL:
+https://jsonplaceholder.typicode.com/posts/1
+
+Purpose:
+Retrieve a specific post with ID 1.
+
+Request:
+The client sends a GET request for post number 1.
+
+Important Response Headers:
+Content-Type: application/json
+
+Expected Status Code:
+200 OK
+
+Meaning of Status Code:
+The server successfully processed the request.
+
+Response:
+The server returns one post in JSON format.
+
+REQUEST 3: CREATE A NEW POST
+
+cURL Command:
+
+curl.exe -i -X POST "https://jsonplaceholder.typicode.com/posts" -H "Content-Type: application/json" -d '{"title":"Radhika New Post","body":"I am learning HTTP and REST API","userId":10}'
+
+HTTP Method:
+POST
+
+URL:
+https://jsonplaceholder.typicode.com/posts
+
+Purpose:
+Create a new post.
+
+Request Header:
+
+Content-Type: application/json
+
+Expected Status Code:
+201 Created
+
+Meaning of Status Code:
+201 Created means the server successfully created the requested resource.
+
+Response:
+The server returns the submitted data with a generated ID.
+
+REQUEST 4: UPDATE A POST
+
+cURL Command:
+
+curl.exe -i -X PUT "https://jsonplaceholder.typicode.com/posts/1" -H "Content-Type: application/json" -d '{"id":1,"title":"Updated Radhika Post","body":"I updated this post using PUT","userId":10}'
+
+HTTP Method:
+PUT
+
+URL:
+https://jsonplaceholder.typicode.com/posts/1
+
+Purpose:
+Update an existing post.
+
+Request Header:
+
+Content-Type: application/json
+
+
+Expected Status Code:
+200 OK
+
+Meaning of Status Code:
+The server successfully processed the update request.
+
+Response:
+The server returns the updated post in JSON format.
+
+REQUEST 5: DELETE A POST
+
+cURL Command:
+
+curl.exe -i -X DELETE "https://jsonplaceholder.typicode.com/posts/1"
+
+HTTP Method:
+DELETE
+
+URL:
+https://jsonplaceholder.typicode.com/posts/1
+
+Purpose:
+Delete the post with ID 1.
+
+Expected Status Code:
+200 OK
+
+Meaning of Status Code:
+The server successfully processed the DELETE request.
+
+Response:
+The API may return an empty JSON object or an empty response body.
+
+STATUS CODE EXPLANATION
+
+200 OK:
+The request was successfully processed.
+
+201 Created:
+A new resource was successfully created.
+
+HTTP METHODS USED
+
+GET:
+Used to retrieve data.
+
+POST:
+Used to create/send new data.
+
+PUT:
+Used to update an existing resource.
+
+DELETE:
+Used to delete a resource.
+
+CONCLUSION
+
+In this assignment, I used cURL to perform five HTTP requests
+against the JSONPlaceholder REST API.
+
+I analyzed GET, POST, PUT and DELETE requests, observed HTTP
+response headers, identified status codes and understood the
+request-response cycle.
+
+The main status codes observed were:
+
+200 OK
+201 Created
